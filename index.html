@@ -1,1 +1,152 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaFeira - Agrinho 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="accessibility-bar" role="complementary" aria-label="Ferramentas de Acessibilidade">
+        <button id="btn-contrast" aria-label="Alternar Modo Escuro">🌓 Modo Escuro</button>
+        <button id="btn-increase-font" aria-label="Aumentar tamanho do texto">A+</button>
+        <button id="btn-decrease-font" aria-label="Diminuir tamanho do texto">A-</button>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>🌾 Conecta<span>Feira</span></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#sobre">O Projeto</a></li>
+                    <li><a href="#barraca">Barraca Interativa</a></li>
+                    <li><a href="#calculadora">Prato Sustentável</a></li>
+                    <li><a href="#quiz">Quiz da Conexão</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="sobre" class="hero-section">
+            <div class="hero-content">
+                <h2>Festejando a Conexão Campo-Cidade</h2>
+                <p>Descubra como a produção rural alimenta o coração das cidades e celebre a interdependência que sustenta o nosso cotidiano.</p>
+                <a href="#barraca" class="btn-primary">Começar Exploração</a>
+            </div>
+        </section>
+
+        <section id="barraca" class="interactive-section">
+            <div class="section-title">
+                <h2>🌽 A Barraca Interativa</h2>
+                <p>Clique em um alimento urbano para descobrir sua verdadeira jornada vinda do campo!</p>
+            </div>
+
+            <div class="food-grid">
+                <div class="food-card" data-food="tomate" role="button" tabindex="0">
+                    <span class="food-icon">🍅</span>
+                    <h3>Tomate Fresco</h3>
+                </div>
+                <div class="food-card" data-food="leite" role="button" tabindex="0">
+                    <span class="food-icon">🥛</span>
+                    <h3>Leite Integral</h3>
+                </div>
+                <div class="food-card" data-food="alface" role="button" tabindex="0">
+                    <span class="food-icon">🥬</span>
+                    <h3>Alface Orgânica</h3>
+                </div>
+            </div>
+
+            <div id="food-details-panel" class="details-panel hidden">
+                <h3 id="panel-title">Selecione um alimento acima</h3>
+                <p id="panel-description">A história do alimento aparecerá aqui...</p>
+                <div class="metric-box">
+                    <span>📍 Distância Média: <strong id="panel-distance">-</strong></span>
+                    <span>⏱️ Tempo de Viagem: <strong id="panel-time">-</strong></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculadora" class="calculator-section">
+            <div class="section-title">
+                <h2>📊 Meu Prato Sustentável</h2>
+                <p>Monte sua refeição e use nosso simulador para calcular o impacto e os recursos do campo necessários.</p>
+            </div>
+
+            <div class="calculator-container">
+                <form id="sustainable-form" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="select-base">Escolha a Base:</label>
+                        <select id="select-base">
+                            <option value="arroz-feijao">Arroz e Feijão</option>
+                            <option value="massa">Macarrão</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select-protein">Escolha a Proteína:</label>
+                        <select id="select-protein">
+                            <option value="carne">Carne Bovina</option>
+                            <option value="frango">Frango</option>
+                            <option value="ovo">Ovo (Vegetariano)</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="btn-calculate" class="btn-accent">Calcular Recursos Rurais</button>
+                </form>
+
+                <div id="calc-result" class="result-box hidden">
+                    <h3>🌾 Recursos Estimados do Campo:</h3>
+                    <ul>
+                        <li>💧 Água gasta: <span id="res-water">0</span> Litros</li>
+                        <li>🌱 Sementes utilizadas: <span id="res-seeds">0</span> unidades</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="quiz-section">
+            <div class="section-title">
+                <h2>🏆 Quiz: Conexão Premiada</h2>
+                <p>Teste seus conhecimentos sobre a união e sustentabilidade entre o campo e a cidade!</p>
+            </div>
+
+            <div id="quiz-container" class="quiz-box">
+                <div class="question-block">
+                    <p class="question-text"><strong>Pergunta:</strong> De que forma a tecnologia digital mais ajuda o pequeno produtor do campo a se conectar com a cidade?</p>
+                    
+                    <div class="options-container">
+                        <label class="option-label">
+                            <input type="radio" name="quiz-q1" value="A"> A) Jogando videogame nas horas vagas.
+                        </label>
+                        <label class="option-label">
+                            <input type="radio" name="quiz-q1" value="B"> B) Utilizando aplicativos para vender a produção direto ao consumidor urbano.
+                        </label>
+                        <label class="option-label">
+                            <input type="radio" name="quiz-q1" value="C"> C) Cortando o uso de qualquer eletricidade no campo.
+                        </label>
+                    </div>
+                </div>
+
+                <button id="btn-submit-quiz" class="btn-primary">Enviar Resposta</button>
+                <p id="quiz-feedback" class="feedback-text hidden"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 - Projeto ConectaFeira. Desenvolvido de forma autoral para o Concurso Agrinho.</p>
+            <p>Formação Alura / Desenvolvimento Front-End</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
