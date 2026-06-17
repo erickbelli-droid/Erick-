@@ -1,589 +1,167 @@
 /* ==========================================================================
-   CONECTAFEIRA 2026 - IDENTIDADE VISUAL: COPA DO MUNDO & TORCIDA BRASILEIRA
+   CONECTAFEIRA 2026 - LÓGICA E INTERATIVIDADE (SCRIPT.JS)
    ========================================================================== */
 
-/* --- Configurações Gerais e Variáveis de Cores --- */
-:root {
-    --verde-brasil: #009739;
-    --amarelo-brasil: #FEDD00;
-    --azul-brasil: #002776;
-    --branco: #FFFFFF;
-    --cinza-escuro: #1C221E;
-    --bg-suave: #F5FAF6;
-    --borda-suave: #E2ECE5;
-    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --transicao: all 0.3s ease-in-out;
-}
-
-/* --- Reset e Estilos de Base --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-}
-
-body {
-    font-family: var(--fonte-principal);
-    background-color: var(--bg-suave);
-    color: var(--cinza-escuro);
-    line-height: 1.6;
-    transition: var(--transicao);
-}
-
-/* --- Barra de Acessibilidade (Estilo Camisa da Seleção) --- */
-.accessibility-bar {
-    background-color: var(--azul-brasil);
-    padding: 8px 5%;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 3px solid var(--amarelo-brasil);
-}
-
-.accessibility-bar button {
-    background-color: var(--verde-brasil);
-    color: var(--amarelo-brasil);
-    border: 2px solid var(--amarelo-brasil);
-    padding: 6px 12px;
-    font-weight: bold;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: var(--transicao);
-    font-size: 0.85rem;
-}
-
-.accessibility-bar button:hover {
-    background-color: var(--amarelo-brasil);
-    color: var(--azul-brasil);
-    transform: scale(1.05);
-}
-
-/* --- Cabeçalho Principal (O Grande Estádio) --- */
-.main-header {
-    background: linear-gradient(135deg, var(--verde-brasil) 70%, #008030 100%);
-    padding: 20px 5%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    border-bottom: 6px solid var(--amarelo-brasil);
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.logo h1 {
-    color: var(--branco);
-    font-size: 2rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 0px var(--azul-brasil);
-}
-
-.logo span {
-    color: var(--amarelo-brasil);
-}
-
-.main-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.main-nav a {
-    color: var(--branco);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: var(--transicao);
-    text-transform: uppercase;
-}
-
-.main-nav a:hover {
-    background-color: var(--amarelo-brasil);
-    color: var(--azul-brasil);
-    box-shadow: 0 4px 0px var(--azul-brasil);
-}
-
-/* --- Seção Hero (Abertura da Copa) --- */
-.hero-section {
-    background: linear-gradient(rgba(0, 39, 118, 0.85), rgba(0, 151, 57, 0.85)), 
-                url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover;
-    padding: 100px 20px;
-    text-align: center;
-    color: var(--branco);
-    border-bottom: 8px solid var(--amarelo-brasil);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Efeito de listras festivas ao fundo */
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(254, 221, 0, 0.05) 40px, rgba(254, 221, 0, 0.05) 80px);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero-content h2 {
-    font-size: 2.8rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    color: var(--amarelo-brasil);
-    text-shadow: 3px 3px 0px var(--azul-brasil);
-    letter-spacing: 1px;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-    margin-bottom: 35px;
-    font-weight: 500;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
-
-/* Botões Estilo Torcedor */
-.btn-primary, .btn-accent {
-    display: inline-block;
-    padding: 14px 35px;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 6px 0px var(--azul-brasil);
-    transition: var(--transicao);
-    font-size: 1.1rem;
-}
-
-.btn-primary {
-    background-color: var(--amarelo-brasil);
-    color: var(--azul-brasil);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 9px 0px var(--azul-brasil);
-    background-color: var(--branco);
-}
-
-.btn-accent {
-    background-color: var(--verde-brasil);
-    color: var(--amarelo-brasil);
-    box-shadow: 0 6px 0px var(--azul-brasil);
-    width: 100%;
-    margin-top: 15px;
-}
-
-.btn-accent:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 9px 0px var(--azul-brasil);
-    background-color: #00b344;
-}
-
-/* --- Títulos das Seções --- */
-.section-title {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.section-title h2 {
-    font-size: 2.2rem;
-    color: var(--azul-brasil);
-    text-transform: uppercase;
-    font-weight: 800;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-.section-title h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 25%;
-    width: 50%;
-    height: 4px;
-    background: linear-gradient(to right, var(--verde-brasil), var(--amarelo-brasil), var(--azul-brasil));
-    border-radius: 2px;
-}
-
-.section-title p {
-    color: #555;
-    margin-top: 10px;
-    font-size: 1.1rem;
-}
-
-/* --- Seções Gerais --- */
-section {
-    padding: 80px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* --- Seção 1: A Barraca Interativa (Cards de Alimentos) --- */
-.interactive-section {
-    background-color: var(--branco);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-left: 6px solid var(--verde-brasil);
-}
-
-.food-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
-}
-
-.food-card {
-    background-color: var(--bg-suave);
-    border: 2px solid var(--borda-suave);
-    border-radius: 12px;
-    padding: 30px 20px;
-    text-align: center;
-    cursor: pointer;
-    transition: var(--transicao);
-    position: relative;
-    overflow: hidden;
-}
-
-.food-card::before {
-    content: '⚽';
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 3rem;
-    opacity: 0.05;
-    transition: var(--transicao);
-}
-
-.food-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--verde-brasil);
-    background-color: #f1f9f3;
-    box-shadow: 0 8px 20px rgba(0, 151, 57, 0.1);
-}
-
-.food-card:hover::before {
-    transform: rotate(45deg) scale(1.2);
-    opacity: 0.1;
-}
-
-.food-icon {
-    font-size: 3.5rem;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.food-card h3 {
-    font-size: 1.3rem;
-    color: var(--azul-brasil);
-    font-weight: 700;
-}
-
-/* Painel de Detalhes Dinâmicos */
-.details-panel {
-    background: linear-gradient(to right, #eef7f0, #f9fdfa);
-    border: 2px dashed var(--verde-brasil);
-    border-radius: 12px;
-    padding: 30px;
-    text-align: center;
-    transition: var(--transicao);
-}
-
-.details-panel h3 {
-    color: var(--verde-brasil);
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-}
-
-.metric-box {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.metric-box span {
-    background-color: var(--branco);
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: 1px solid var(--borda-suave);
-    font-size: 1.05rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-}
-
-.metric-box strong {
-    color: var(--azul-brasil);
-}
-
-/* --- Seção 2: Calculadora / Arena de Impacto --- */
-.calculator-section {
-    background-color: var(--branco);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    margin-bottom: 40px;
-    border-right: 6px solid var(--amarelo-brasil);
-}
-
-.calculator-container {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: var(--bg-suave);
-    padding: 40px;
-    border-radius: 12px;
-    border: 2px solid var(--borda-suave);
-}
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 700;
-    color: var(--azul-brasil);
-    margin-bottom: 8px;
-    font-size: 1.05rem;
-}
-
-.form-group select {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 8px;
-    border: 2px solid var(--borda-suave);
-    font-size: 1rem;
-    background-color: var(--branco);
-    outline: none;
-    transition: var(--transicao);
-    font-family: var(--fonte-principal);
-}
-
-.form-group select:focus {
-    border-color: var(--azul-brasil);
-    box-shadow: 0 0 0 3px rgba(0, 39, 118, 0.1);
-}
-
-.result-box {
-    margin-top: 30px;
-    padding: 25px;
-    background-color: var(--azul-brasil);
-    color: var(--branco);
-    border-radius: 8px;
-    border-left: 6px solid var(--amarelo-brasil);
-}
-
-.result-box h3 {
-    color: var(--amarelo-brasil);
-    margin-bottom: 15px;
-    font-size: 1.25rem;
-}
-
-.result-box ul {
-    list-style: none;
-}
-
-.result-box li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.result-box span {
-    font-weight: 800;
-    color: var(--amarelo-brasil);
-    font-size: 1.3rem;
-}
-
-/* --- Seção 3: Quiz da Grande Torcida --- */
-.quiz-section {
-    background-color: var(--branco);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    margin-bottom: 60px;
-    border-bottom: 6px solid var(--azul-brasil);
-}
-
-.quiz-box {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: var(--bg-suave);
-    padding: 40px;
-    border-radius: 12px;
-    border: 2px solid var(--borda-suave);
-}
-
-.question-block {
-    margin-bottom: 30px;
-}
-
-.question-text {
-    font-size: 1.2rem;
-    color: var(--cinza-escuro);
-    margin-bottom: 20px;
-}
-
-.options-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.option-label {
-    background-color: var(--branco);
-    border: 2px solid var(--borda-suave);
-    padding: 15px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-weight: 600;
-    transition: var(--transicao);
-}
-
-.option-label:hover {
-    border-color: var(--azul-brasil);
-    background-color: #f0f4fd;
-}
-
-.option-label input[type="radio"] {
-    transform: scale(1.3);
-    accent-color: var(--azul-brasil);
-}
-
-.feedback-text {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 6px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.feedback-text.correct {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.feedback-text.incorrect {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-/* --- Classes Utilitárias (JS Toggle) --- */
-.hidden {
-    display: none !important;
-}
-
-/* --- Modo Escuro (Festa Noturna) --- */
-body.dark-mode {
-    background-color: #0f1411;
-    color: #e2ece5;
-}
-
-body.dark-mode .interactive-section,
-body.dark-mode .calculator-section,
-body.dark-mode .quiz-section,
-body.dark-mode .food-card,
-body.dark-mode .calculator-container,
-body.dark-mode .quiz-box,
-body.dark-mode .option-label,
-body.dark-mode .metric-box span {
-    background-color: #171d19;
-    border-color: #2b362f;
-    color: #e2ece5;
-}
-
-body.dark-mode .section-title h2 {
-    color: var(--amarelo-brasil);
-}
-
-body.dark-mode .option-label:hover {
-    background-color: #1d2721;
-}
-
-body.dark-mode .food-card h3 {
-    color: var(--branco);
-}
-
-body.dark-mode .details-panel {
-    background: linear-gradient(to right, #131f16, #16241a);
-}
-
-/* --- Rodapé (Fim de Jogo / Encerramento) --- */
-.main-footer {
-    background-color: var(--cinza-escuro);
-    color: #a0aba2;
-    padding: 40px 20px;
-    text-align: center;
-    border-top: 4px solid var(--verde-brasil);
-}
-
-.footer-container p {
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-}
-
-.footer-container p:first-child {
-    color: var(--branco);
-    font-weight: 600;
-}
-
-/* --- Responsividade (Media Queries para Telas de Celular e Tablet) --- */
-@media screen and (max-width: 768px) {
-    html {
-        font-size: 14px;
-    }
+document.addEventListener("DOMContentLoaded", () => {
     
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-    }
+    // ==========================================
+    // 1. FERRAMENTAS DE ACESSIBILIDADE
+    // ==========================================
+    const btnContrast = document.getElementById("btn-contrast");
+    const btnIncreaseFont = document.getElementById("btn-increase-font");
+    const btnDecreaseFont = document.getElementById("btn-decrease-font");
     
-    .main-nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-    
-    .hero-content h2 {
-        font-size: 2.2rem;
-    }
-    
-    .metric-box {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .calculator-container, .quiz-box {
-        padding: 20px;
-    }
-}
+    let fontSizePercentage = 100;
+
+    // Alternar Modo Escuro (Festa Noturna)
+    btnContrast.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+    });
+
+    // Aumentar Fonte
+    btnIncreaseFont.addEventListener("click", () => {
+        if (fontSizePercentage < 130) {
+            fontSizePercentage += 10;
+            document.documentElement.style.fontSize = `${fontSizePercentage}%`;
+        }
+    });
+
+    // Diminuir Fonte
+    btnDecreaseFont.addEventListener("click", () => {
+        if (fontSizePercentage > 80) {
+            fontSizePercentage -= 10;
+            document.documentElement.style.fontSize = `${fontSizePercentage}%`;
+        }
+    });
+
+
+    // ==========================================
+    // 2. SEÇÃO 1: BARRACA INTERATIVA (A JORNADA DO CAMPEÃO)
+    // ==========================================
+    const foodCards = document.querySelectorAll(".food-card");
+    const detailsPanel = document.getElementById("food-details-panel");
+    const panelTitle = document.getElementById("panel-title");
+    const panelDescription = document.getElementById("panel-description");
+    const panelDistance = document.getElementById("panel-distance");
+    const panelTime = document.getElementById("panel-time");
+
+    // Dados dos alimentos simulando uma "escalação" vinda do campo
+    const foodData = {
+        tomate: {
+            titulo: "🍅 Tomate Craque de Bola",
+            descricao: "Cultivado por agricultura familiar com sistemas de irrigação inteligente. Ele sai do campo festejando e chega fresquinho para abastecer as feiras e mercados da cidade!",
+            distancia: "120 km",
+            tempo: "2 horas de viagem"
+        },
+        leite: {
+            titulo: "🥛 Leite Camisa 10",
+            descricao: "Produzido em propriedades leiteiras modernas que usam tecnologia para garantir o bem-estar animal. Viaja em caminhões resfriados (verdadeiros tanques táticos) para garantir a energia do trabalhador urbano.",
+            distancia: "85 km",
+            tempo: "1 hora e 30 min"
+        },
+        alface: {
+            titulo: "🥬 Alface Orgânica Invicta",
+            descricao: "Livre de agrotóxicos, essa alface representa a zaga da nossa saúde! É colhida de madrugada no cinturão verde rural e chega logo cedo na mesa da torcida da cidade.",
+            distancia: "45 km",
+            tempo: "50 minutos"
+        }
+    };
+
+    foodCards.forEach(card => {
+        card.addEventListener("click", () => {
+            const foodKey = card.getAttribute("data-food");
+            const data = foodData[foodKey];
+
+            if (data) {
+                // Atualiza o painel com os dados
+                panelTitle.innerText = data.titulo;
+                panelDescription.innerText = data.descricao;
+                panelDistance.innerText = data.distancia;
+                panelTime.innerText = data.tempo;
+
+                // Mostra o painel removendo a classe 'hidden'
+                detailsPanel.classList.remove("hidden");
+                
+                // Efeito visual de foco/seleção (feedback para o usuário)
+                detailsPanel.style.animation = "none";
+                setTimeout(() => {
+                    detailsPanel.style.animation = "pulse 0.5s ease-in-out";
+                }, 10);
+            }
+        });
+    });
+
+
+    // ==========================================
+    // 3. SEÇÃO 2: CALCULADORA MEU PRATO SUSTENTÁVEL (ARENA DE IMPACTO)
+    // ==========================================
+    const btnCalculate = document.getElementById("btn-calculate");
+    const calcResult = document.getElementById("calc-result");
+    const resWater = document.getElementById("res-water");
+    const resSeeds = document.getElementById("res-seeds");
+
+    btnCalculate.addEventListener("click", () => {
+        const base = document.getElementById("select-base").value;
+        const protein = document.getElementById("select-protein").value;
+
+        let waterTotal = 0;
+        let seedsTotal = 0;
+
+        // Lógica de cálculo baseada nas escolhas (Simulação pedagógica)
+        if (base === "arroz-feijao") {
+            waterTotal += 250;
+            seedsTotal += 40;
+        } else if (base === "massa") {
+            waterTotal += 180;
+            seedsTotal += 30;
+        }
+
+        if (protein === "carne") {
+            waterTotal += 1500; // Carne exige muito mais recursos hídricos
+            seedsTotal += 150;  // Grãos para o trato do gado
+        } else if (protein === "frango") {
+            waterTotal += 600;
+            seedsTotal += 80;
+        } else if (protein === "ovo") {
+            waterTotal += 200;
+            seedsTotal += 20;
+        }
+
+        // Exibe os resultados na tela de forma animada
+        resWater.innerText = waterTotal.toLocaleString('pt-BR');
+        resSeeds.innerText = seedsTotal.toLocaleString('pt-BR');
+        
+        calcResult.classList.remove("hidden");
+    });
+
+
+    // ==========================================
+    // 4. SEÇÃO 3: QUIZ CONEXÃO PREMIADA (DECISÃO NOS PÊNALTIS)
+    // ==========================================
+    const btnSubmitQuiz = document.getElementById("btn-submit-quiz");
+    const quizFeedback = document.getElementById("quiz-feedback");
+
+    btnSubmitQuiz.addEventListener("click", () => {
+        // Seleciona a opção de rádio que o usuário marcou
+        const selectedOption = document.querySelector('input[name="quiz-q1"]:checked');
+
+        if (!selectedOption) {
+            quizFeedback.innerText = "⚠️ Alerta do Juiz: Escolha uma resposta antes de chutar para o gol!";
+            quizFeedback.className = "feedback-text incorrect";
+            quizFeedback.classList.remove("hidden");
+            return;
+        }
+
+        if (selectedOption.value === "B") {
+            // Resposta Correta
+            quizFeedback.innerHTML = "⚽ GOOOOL DO BRASIL! Resposta exata! Os aplicativos conectam diretamente quem produz a quem consome na cidade, reduzindo custos e festejando a tecnologia no campo!";
+            quizFeedback.className = "feedback-text correct";
+        } else {
+            // Resposta Incorreta
+            quizFeedback.innerHTML = "❌ NA TRAVE! Essa não é a melhor tática. Tente novamente! O uso correto da tecnologia digital encurta as distâncias de mercado.";
+            quizFeedback.className = "feedback-text incorrect";
+        }
+
+        quizFeedback.classList.remove("hidden");
+    });
+});
