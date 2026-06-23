@@ -1,52 +1,53 @@
-# 🌾 ConectaFeira: A Celebração que Alimenta a Cidade
+# ⚽🌾 ConectaFeira: A Selebração que Alimenta a Cidade
 
 > **Projeto desenvolvido para o Concurso Agrinho 2026** > **Categoria:** Desenvolvimento Front-End  
 > **Tema:** Festejando a Conexão Campo-Cidade  
+> **Estética Visual:** Copa do Mundo & Orgulho da Torcida Brasileira  
 
 ---
 
 ## 📝 Descrição do Projeto
-[cite_start]O **ConectaFeira** é um site autoral e interativo desenvolvido para aproximar a realidade do campo do cotidiano urbano[cite: 5, 8]. [cite_start]Utilizando a metáfora visual de uma feira livre — o maior ponto de encontro físico entre a produção rural e o consumidor da cidade —, o projeto celebra a interdependência e a cooperação vital entre esses dois universos[cite: 8].
+O **ConectaFeira** é uma plataforma digital autoral e interativa que celebra a conexão vital entre o campo e a cidade, utilizando a energia contagiante de uma das maiores paixões nacionais: o futebol e a **Copa do Mundo**. 
 
-[cite_start]O grande diferencial do projeto está na aplicação de tecnologias modernas de Front-End, com forte foco em **interatividade via JavaScript**, entregando uma experiência digital dinâmica, educativa e engajadora[cite: 29, 87, 88].
-
----
-
-## 🎯 Objetivos
-* [cite_start]**Conscientizar:** Mostrar ao habitante urbano de onde vem o alimento e o valor do trabalho do produtor rural[cite: 4, 8].
-* [cite_start]**Interagir:** Engajar o usuário por meio de ferramentas práticas e gamificadas para fixar o conhecimento[cite: 88, 89].
-* [cite_start]**Incluir:** Garantir que o site seja acessível e funcional para todas as pessoas, independentemente do dispositivo utilizado[cite: 13, 168, 181].
+Assim como em uma grande seleção, onde o trabalho tático de cada jogador é essencial para o gol, a sociedade depende do entrosamento perfeito entre o produtor rural e o consumidor urbano. O site adota a identidade visual das cores do Brasil (Verde, Amarelo e Azul) e termos da nossa torcida para transformar o aprendizado sobre o agronegócio sustentável em uma verdadeira festa digital.
 
 ---
 
-## 🚀 Funcionalidades Principais (Interatividade)
-[cite_start]O projeto destaca-se pelas seguintes aplicações interativas movidas a JavaScript[cite: 87]:
-* [cite_start]**A Barraca Interativa (Simulador):** O usuário clica em diferentes alimentos urbanos e descobre a jornada e o tempo que eles levam para sair do campo até as mesas das cidades[cite: 89, 90].
-* [cite_start]**Calculadora "Meu Prato Sustentável":** Uma ferramenta que calcula em tempo real os recursos necessários (como água e sementes) para produzir aquela refeição[cite: 94].
-* [cite_start]**Quiz "Conexão Premiada":** Um jogo de perguntas e respostas dinâmico focado em testar os conhecimentos sobre sustentabilidade e agricultura familiar[cite: 99, 103].
+## 🎯 Objetivos (A Nossa Tática)
+* **Conscientizar:** Convocar o habitante urbano a vestir a camisa do campo, mostrando a procedência dos alimentos e o valor da agricultura familiar.
+* **Interagir:** Engajar o usuário através de recursos dinâmicos programados em JavaScript, simulando a emoção de uma partida de futebol.
+* **Incluir:** Garantir acessibilidade universal com ferramentas de inclusão digital, permitindo que qualquer torcedor navegue perfeitamente.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-* [cite_start]**HTML5 Semântico:** Estruturação limpa, organizada e otimizada para leitores de tela[cite: 149, 158].
-* [cite_start]**CSS3:** Estilização visual moderna e uso de *Media Queries* para garantir responsividade em computadores, tablets e celulares[cite: 58, 168, 172].
-* [cite_start]**JavaScript:** Toda a lógica de interatividade, cálculos e funcionamento dinâmico das ferramentas[cite: 75, 87].
+## 🚀 Funcionalidades Principais (A Escalação do Time)
+O projeto destaca-se pelas seguintes aplicações interativas movidas a JavaScript:
+* **🌽 A Barraca Interativa (A Jornada do Campeão):** Um simulador dinâmico onde o usuário clica nos alimentos (como o *Tomate Craque de Bola* ou o *Leite Camisa 10*) para descobrir a "jogada ensaiada" e a quilometragem percorrida do campo até as feiras urbanas.
+* **📊 Meu Prato Sustentável (Arena de Impacto):** Uma calculadora em tempo real que analisa os ingredientes escolhidos pelo usuário e mostra quanta água e sementes o campo precisou investir para colocar aquela refeição na mesa.
+* **🏆 Quiz Conexão Premiada (Decisão nos Pênaltis):** Um jogo de perguntas e respostas gamificado. Chute para o gol escolhendo as alternativas sobre sustentabilidade e receba feedbacks imediatos da torcida (*"GOOOOL"* ou *"Na Trave"*).
 
 ---
 
-## ♿ Acessibilidade e Inclusão
-[cite_start]Pensado para ser uma solução digital verdadeiramente inclusiva, o site conta com[cite: 181]:
-* [cite_start]**Controle de Fonte:** Opção para aumentar e diminuir o tamanho dos textos[cite: 191, 192].
-* [cite_start]**Alternador de Modo Escuro:** Ajuste de contraste para melhor conforto visual[cite: 189, 195].
-* [cite_start]**Layout Responsivo:** Adaptação fluida para qualquer tamanho de tela[cite: 168].
+## 🛠️ Tecnologias Utilizadas (O Esquema Tático)
+* **HTML5 Semântico:** Estrutura perfeitamente organizada e limpa, servindo como a fundação sólida do nosso estádio digital.
+* **CSS3 (Cores do Brasil):** Estilização visual moderna com layouts em grid, efeitos vibrantes ao passar o mouse (*hover*), animações de pulso dinâmicas e *Media Queries* para garantir responsividade em celulares, tablets e computadores.
+* **JavaScript Autoral:** O cérebro do time. Responsável por processar os cálculos, alternar modos de visualização e gerenciar toda a lógica interativa da página.
+
+---
+
+## ♿ Acessibilidade e Inclusão (Jogo para Todos)
+Desenvolvido com foco nas diretrizes de inclusão, o site conta com uma barra fixa contendo:
+* **🌓 Alternador de Modo Escuro:** Ideal para uma "festa noturna", mudando o contraste visual para leitura confortável.
+* **A+ / A- Controle de Fonte:** Amplia ou reduz o tamanho dos textos para garantir o conforto visual de pessoas com baixa visão.
+* **Navegação Responsiva:** Layout fluido e adaptável a qualquer formato de tela.
 
 ---
 
 ## 👤 Autoria e Originalidade
-[cite_start]Este projeto foi desenvolvido de forma 100% autoral, aplicando os conceitos técnicos trabalhados na formação da Alura para o Agrinho 2026[cite: 5, 87, 109, 230]. 
+Este projeto foi desenvolvido de forma 100% autoral, integrando os aprendizados técnicos da formação da Alura com uma visão criativa, patriótica e conectada às exigências do regulamento do Agrinho 2026.
 
 ---
 
 ## 🌐 Link do Projeto
-Você pode acessar o site publicado clicando no link abaixo:  
-[cite_start]👉 [Visualizar o ConectaFeira no GitHub Pages](https://seu-usuario.github.io/nome-do-seu-repositorio) *(Substitua pelo seu link real)*
+Sinta a energia da nossa torcida e acesse o site publicado:  
+👉 [Visualizar o ConectaFeira no GitHub Pages](https://seu-usuario.github.io/nome-do-seu-repositorio) *(Substitua pelo seu link real do GitHub Pages)*
