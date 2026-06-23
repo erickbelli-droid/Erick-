@@ -82,10 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Mostra o painel removendo a classe 'hidden'
                 detailsPanel.classList.remove("hidden");
                 
-                // Efeito visual de foco/seleção (feedback para o usuário)
+                // Ativa animação CSS suave de pulso
                 detailsPanel.style.animation = "none";
                 setTimeout(() => {
-                    detailsPanel.style.animation = "pulse 0.5s ease-in-out";
+                    detailsPanel.style.animation = "pulse 0.4s ease-in-out";
                 }, 10);
             }
         });
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let waterTotal = 0;
         let seedsTotal = 0;
 
-        // Lógica de cálculo baseada nas escolhas (Simulação pedagógica)
+        // Lógica de cálculo baseada nas escolhas
         if (base === "arroz-feijao") {
             waterTotal += 250;
             seedsTotal += 40;
@@ -117,8 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (protein === "carne") {
-            waterTotal += 1500; // Carne exige muito mais recursos hídricos
-            seedsTotal += 150;  // Grãos para o trato do gado
+            waterTotal += 1500;
+            seedsTotal += 150; 
         } else if (protein === "frango") {
             waterTotal += 600;
             seedsTotal += 80;
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
             seedsTotal += 20;
         }
 
-        // Exibe os resultados na tela de forma animada
+        // Exibe os resultados na tela
         resWater.innerText = waterTotal.toLocaleString('pt-BR');
         resSeeds.innerText = seedsTotal.toLocaleString('pt-BR');
         
@@ -142,7 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const quizFeedback = document.getElementById("quiz-feedback");
 
     btnSubmitQuiz.addEventListener("click", () => {
-        // Seleciona a opção de rádio que o usuário marcou
         const selectedOption = document.querySelector('input[name="quiz-q1"]:checked');
 
         if (!selectedOption) {
@@ -153,11 +152,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (selectedOption.value === "B") {
-            // Resposta Correta
             quizFeedback.innerHTML = "⚽ GOOOOL DO BRASIL! Resposta exata! Os aplicativos conectam diretamente quem produz a quem consome na cidade, reduzindo custos e festejando a tecnologia no campo!";
             quizFeedback.className = "feedback-text correct";
         } else {
-            // Resposta Incorreta
             quizFeedback.innerHTML = "❌ NA TRAVE! Essa não é a melhor tática. Tente novamente! O uso correto da tecnologia digital encurta as distâncias de mercado.";
             quizFeedback.className = "feedback-text incorrect";
         }
