@@ -133,7 +133,6 @@ body {
     overflow: hidden;
 }
 
-/* Efeito de listras festivas ao fundo */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -316,6 +315,12 @@ section {
     padding: 30px;
     text-align: center;
     transition: var(--transicao);
+}
+
+/* Animação para ativação do JS */
+@keyframes pulse {
+    0% { transform: scale(0.98); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 .details-panel h3 {
@@ -558,7 +563,7 @@ body.dark-mode .details-panel {
     font-weight: 600;
 }
 
-/* --- Responsividade (Media Queries para Telas de Celular e Tablet) --- */
+/* --- Responsividade (Media Queries) --- */
 @media screen and (max-width: 768px) {
     html {
         font-size: 14px;
